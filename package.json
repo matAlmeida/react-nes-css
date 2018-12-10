@@ -14,14 +14,18 @@
     "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.6",
+    "@types/react-test-renderer": "^16.0.3",
     "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1",
+    "react-test-renderer": "^16.6.3",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@types/classnames": "^2.2.6",
+    "@babel/preset-typescript": "^7.1.0",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.12",
     "@types/react": "^16.7.13",
