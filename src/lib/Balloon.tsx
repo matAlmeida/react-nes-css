@@ -6,7 +6,7 @@ interface IProps {
   children: ReactNode;
 }
 
-export default class Checkbox extends Component<IProps> {
+export default class Balloon extends Component<IProps> {
   render() {
     const { left, children } = this.props;
 
