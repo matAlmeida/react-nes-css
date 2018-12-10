@@ -6,28 +6,24 @@ const App = () => (
   <div>
     <Container title="Buttons">
       <Button label="Normal" />
-      <Button label="Primary" type="is-primary" />
-      <Button label="Success" type="is-success" />
-      <Button label="Warning" type="is-warning" />
-      <Button label="Error" type="is-error" />
+      <Button label="Primary" primary />
+      <Button label="Success" success />
+      <Button label="Warning" warning />
+      <Button label="Error" error />
     </Container>
     <Container title="Containers">
-      <div className="containers">
-        <Container title="Container.is-center" center>
-          Good morning. Thou hast had a good night's sleep, I hope.
-        </Container>
-        <Container title="Container.is-dark" dark>
-          Good morning. Thou hast had a good night's sleep, I hope.
-        </Container>
-      </div>
-      <div className="containers">
-        <Container rounded>
-          Good morning. Thou hast had a good night's sleep, I hope.
-        </Container>
-        <Container rounded dark>
-          Good morning. Thou hast had a good night's sleep, I hope.
-        </Container>
-      </div>
+      <Container title="Container.is-center" center>
+        Good morning. Thou hast had a good night's sleep, I hope.
+      </Container>
+      <Container title="Container.is-dark" dark>
+        Good morning. Thou hast had a good night's sleep, I hope.
+      </Container>
+      <Container rounded>
+        Good morning. Thou hast had a good night's sleep, I hope.
+      </Container>
+      <Container rounded dark>
+        Good morning. Thou hast had a good night's sleep, I hope.
+      </Container>
     </Container>
     <Container title="Form">
       <Field label="Your Name" />
