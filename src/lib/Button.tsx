@@ -1,4 +1,4 @@
-import React, { Component, MouseEvent } from "react";
+import React, { Component, CSSProperties, MouseEvent } from "react";
 import classnames from "classnames";
 
 type buttonType = "is-primary" | "is-success" | "is-warning" | "is-error";
@@ -15,6 +15,7 @@ interface IProps {
   error?: boolean;
   disabled?: boolean;
   onClick?: buttonAction;
+  style?: CSSProperties;
 }
 
 export default class Button extends Component<IProps> {
@@ -26,7 +27,8 @@ export default class Button extends Component<IProps> {
       warning,
       error,
       disabled,
-      onClick
+      onClick,
+      style
     } = this.props;
     const buttonClasses = classnames(
       "nes-btn",
@@ -38,7 +40,12 @@ export default class Button extends Component<IProps> {
     );
 
     return (
-      <button type="button" onClick={onClick} className={buttonClasses}>
+      <button
+        type="button"
+        onClick={onClick}
+        className={buttonClasses}
+        style={{ ...style }}
+      >
         {label}
       </button>
     );
