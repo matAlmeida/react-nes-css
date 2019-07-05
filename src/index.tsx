@@ -10,6 +10,7 @@ const App = () => (
       <Button label="Success" success />
       <Button label="Warning" warning />
       <Button label="Error" error />
+      <Button label="Disabled" disabled />
     </Container>
     <Container title="Containers">
       <Container title="Container.is-center" center>
@@ -30,6 +31,7 @@ const App = () => (
       <Field label=".input.is-success" placeholder="NES.css" success inline />
       <Field label=".input.is-warning" placeholder="8bit.css" warning inline />
       <Field label=".input.is-error" placeholder="awesome.css" error inline />
+      <Field label=".input.is-dark" placeholder="dark.css" dark inline />
     </Container>
     <Container title="Balloons">
       <Balloon left>Hello NES.css</Balloon>

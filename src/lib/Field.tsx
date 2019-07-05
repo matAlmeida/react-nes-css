@@ -9,6 +9,7 @@ interface IProps {
   success?: boolean;
   warning?: boolean;
   error?: boolean;
+  dark?: boolean;
 }
 
 export default class Field extends Component<IProps> {
@@ -20,20 +21,31 @@ export default class Field extends Component<IProps> {
       success,
       warning,
       error,
+      dark,
       inline
     } = this.props;
 
     const fieldClasses = classnames("field", { "is-inline": inline });
     const inputClasses = classnames(
-      "input",
+      "nes-input",
       { "is-success": success },
       { "is-warning": warning },
-      { "is-error": error }
+      { "is-error": error },
+      { "is-dark": dark }
     );
 
     return (
-      <div className={fieldClasses}>
-        <label htmlFor={name}>{label}</label>
+      <div
+        className={fieldClasses}
+        style={
+          dark
+            ? { backgroundColor: "#212529", padding: "1em" }
+            : { padding: "1em" }
+        }
+      >
+        <label style={dark ? { color: "#FFF" } : {}} htmlFor={name}>
+          {label}
+        </label>
         <input
           type="text"
           id={name}

@@ -13,18 +13,28 @@ interface IProps {
   success?: boolean;
   warning?: boolean;
   error?: boolean;
+  disabled?: boolean;
   onClick?: buttonAction;
 }
 
 export default class Button extends Component<IProps> {
   render() {
-    const { label, primary, success, warning, error, onClick } = this.props;
+    const {
+      label,
+      primary,
+      success,
+      warning,
+      error,
+      disabled,
+      onClick
+    } = this.props;
     const buttonClasses = classnames(
-      "btn",
+      "nes-btn",
       { "is-primary": primary },
       { "is-success": success },
       { "is-warning": warning },
-      { "is-error": error }
+      { "is-error": error },
+      { "is-disabled": disabled }
     );
 
     return (

@@ -11,7 +11,7 @@ export default class Balloon extends Component<IProps> {
     const { left, children } = this.props;
 
     const balloonClasses = classnames(
-      "balloon",
+      "nes-balloon",
       { "from-left": left },
       { "from-right": !left }
     );

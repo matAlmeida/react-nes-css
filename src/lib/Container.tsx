@@ -14,7 +14,7 @@ export default class Container extends Component<IProps> {
   render() {
     const { center, rounded, dark, title, style, children } = this.props;
     const containerClasses = classnames(
-      "container",
+      "nes-container",
       { "with-title": title },
       { "is-center": center },
       { "is-rounded": rounded },
